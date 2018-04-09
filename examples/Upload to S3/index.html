@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+            var thisId = null;
+
+            function uploadToS3() {
+                var key = $('#uploadKey').val();
+                var value = $('#uploadValue').val();
+        
+                mflyCommands.getUploadUrl(key)
+                    .then(function(response) {
+                        $.ajax({
+                            url: response.url,
+                            headers: {'Content-Type': 'text/plain'},
+                            type: 'PUT',
+                            data: value,
+                            success: function() { console.log('Uploaded data successfully.'); }
+                        });
+                    });
+            }
+
+            function Upload() {
+                
+            }
+
+		</script>
+		<style type="text/css">
+			div[id]					{ background:#ccc; padding:20px; margin:50px 20px 0 0; float:left; }
+			.exit					{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+            .logs                   { white-space: pre; }
+		</style>
+	</head>
+
+	<body>
+        <p>Enter key and value below to upload.</p>
+		
+        <label>Key</label>
+        <input id="uploadKey" value="test.txt"></input>
+        <label>Value</label>
+        <input id="uploadValue" value="test data as plain text"></input>
+        <button id="uploadButton" onclick="javascript:uploadToS3()">Upload</button>
+
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

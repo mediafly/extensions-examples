@@ -1,0 +1,6 @@
+body            { font-family: Arial, sans-serif; }
+.exit			{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+table, th, td   { border: 1px solid gray; }
+table           { width: 90%; text-align: center; border-collapse: collapse; }
+th              { font-weight: bold; background-color: lightgray; }
+th, td          { padding: 10px; }

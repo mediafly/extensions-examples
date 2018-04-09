@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <style type="text/css">
+        body { margin:0; padding:0; }
+        body.ipad { background-image:url('1440x1080.jpg'); width:1440px; height:1080px; }
+        body.widescreen { background-image:url('1920x1080.jpg'); width:1920px; height:1080px; }
+        #exit { position:absolute; right:10px; top:10px; width:100px; height:35px; background:#888; color:#fff; text-align:center; }
+        #secondScreenOptions { position:absolute; right:10px; top:60px; width:200px; height:35px; background:#888; color:#fff; text-align:center; }
+
+    </style>
+    <script type="text/javascript">
+        // Called to set up the Interactive.
+        // Note that we pass mflyWideScreenSupport: true to indicate that this Interactive supports widescreen functions.
+        function mflyDataInit (_params) {
+            $(".content").append("mflyDataInit=" + JSON.stringify(_params) + "<br>");
+            return '{ "mflyInitVersion" : "2", "mflyWideScreenSupport" : true }';
+        }
+
+        // Called when the app tells the Interactive that a second screen is available to it.
+        function mflySecondScreenAvailable(available) {
+            $(".content").append("mflySecondScreenAvailable=" + available + "<br>");
+            if (available) {
+                $("#secondscreen").show();
+            } else {
+                $("#secondscreen").hide();
+                // Reset the layout
+                $("body").removeClass("widescreen").addClass("ipad");
+            }
+        }
+
+        // Called when the user changes to widescreen.
+        function mflyWideScreen(isWidescreen) {
+            $(".content").append("mflyWideScreen(" + isWidescreen + ")<br>");
+            if (isWidescreen) {
+                $("body").removeClass("ipad").addClass("widescreen");
+            } else {
+                $("body").removeClass("widescreen").addClass("ipad");
+            }
+        }
+
+        document.addEventListener('touchmove', function(event) {
+            event.preventDefault();
+        }, false);
+
+        $(document).on("touchstart", "#exit", function () {
+            window.location = "mfly://control/done";
+        });
+        $(document).on("touchstart", "#secondScreenOptions", function () {
+            window.open("mfly://control/secondScreenOptions");
+        });
+
+        function mflySyncStatus() {
+
+        }
+
+        function mflyInit() {
+
+        }
+
+        function mflyDownloadStatus() {
+
+        }
+
+        function mflyResume() {
+
+        }
+
+        function mflyPause() {
+
+        }
+
+    </script>
+    </head>
+    <body class="ipad">
+        <div class="content">
+            Demonstrate iOS Widescreen Support.<br>
+            You should see fish on a blue background when on the iPad, and a black cat when in Second Screen via AirPlay or HDMI.<br>
+            <p>&nbsp;</p>
+            Let's try bringing up a keyboard! Click into this input field: <input type="text" name="invokekeyboard"><br>
+        </div>
+        <div id="exit">Exit</div>
+		<div id="secondScreenOptions">
+			Second Screen Options
+        </div>
+
+    </body>
+</html>

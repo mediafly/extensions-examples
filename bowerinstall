@@ -1,0 +1,50 @@
+#!/bin/sh
+cd ./examples
+cd Collections/app
+bower install
+rm Collections.zip; zip -9 -r Collections.zip . -x *.png *.gif *.jpg; zip -0 -r Collections.zip . -i *.png *.gif *.jpg
+cd "../../Custom Metadata/app"
+bower install
+rm "Custom Metadata".zip; zip -9 -r "Custom Metadata".zip . -x *.png *.gif *.jpg; zip -0 -r "Custom Metadata".zip . -i *.png *.gif *.jpg
+cd "../../Downloader status/app"
+bower install
+rm "Downloader status".zip; zip -9 -r "Downloader status".zip . -x *.png *.gif *.jpg; zip -0 -r "Downloader status".zip . -i *.png *.gif *.jpg
+cd "../../Embed and Data Items/Containing Interactive/app"
+bower install
+rm Embed.zip; zip -9 -r Embed.zip . -x *.png *.gif *.jpg; zip -0 -r Embed.zip . -i *.png *.gif *.jpg
+cd "../../../Filter/app"
+bower install
+rm Filter.zip; zip -9 -r Filter.zip . -x *.png *.gif *.jpg; zip -0 -r Filter.zip . -i *.png *.gif *.jpg
+cd "../../Get Folder and Get Item/app"
+bower install
+rm "Get Folder and Get Item".zip; zip -9 -r "Get Folder and Get Item".zip . -x *.png *.gif *.jpg; zip -0 -r "Get Folder and Get Item".zip . -i *.png *.gif *.jpg
+cd "../../getInteractiveInfo"
+bower install
+rm getInteractiveInfo.zip; zip -9 -r getInteractiveInfo.zip . -x *.png *.gif *.jpg; zip -0 -r getInteractiveInfo.zip . -i *.png *.gif *.jpg
+cd "../GPS/app"
+bower install
+rm GPS.zip; zip -9 -r GPS.zip . -x *.png *.gif *.jpg; zip -0 -r GPS.zip . -i *.png *.gif *.jpg
+cd "../../Kitchen Sink/app"
+bower install
+rm "Kitchen Sink".zip; zip -9 -r "Kitchen Sink".zip . -x *.png *.gif *.jpg; zip -0 -r "Kitchen Sink".zip . -i *.png *.gif *.jpg
+cd "../../mflyInit and mflyDataInit logger"
+bower install
+rm "mflyInit and mflyDataInit logger".zip; zip -9 -r "mflyInit and mflyDataInit logger".zip . -x *.png *.gif *.jpg; zip -0 -r "mflyInit and mflyDataInit logger".zip . -i *.png *.gif *.jpg
+cd "../Online Offline Status/app"
+bower install
+rm "Online Offline Status".zip; zip -9 -r "Online Offline Status".zip . -x *.png *.gif *.jpg; zip -0 -r "Online Offline Status".zip . -i *.png *.gif *.jpg
+cd "../../Open and Goto/app"
+bower install
+rm "Open and Goto".zip; zip -9 -r "Open and Goto".zip . -x *.png *.gif *.jpg; zip -0 -r "Open and Goto".zip . -i *.png *.gif *.jpg
+cd "../../Refresh and mflySync logger"
+bower install
+rm "Refresh and mflySync logger".zip; zip -9 -r "Refresh and mflySync logger".zip . -x *.png *.gif *.jpg; zip -0 -r "Refresh and mflySync logger".zip . -i *.png *.gif *.jpg
+cd "../Save and retrieve data/app"
+bower install
+rm "Save and retrieve data".zip; zip -9 -r "Save and retrieve data".zip . -x *.png *.gif *.jpg; zip -0 -r "Save and retrieve data".zip . -i *.png *.gif *.jpg
+cd "../../Search/app"
+bower install
+rm Search.zip; zip -9 -r Search.zip . -x *.png *.gif *.jpg; zip -0 -r Search.zip . -i *.png *.gif *.jpg
+cd "../../Widescreen"
+bower install
+rm Widescreen.zip; zip -9 -r Widescreen.zip . -x *.png *.gif *.jpg; zip -0 -r Widescreen.zip . -i *.png *.gif *.jpg

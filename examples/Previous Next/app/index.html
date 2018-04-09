@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>mflyInit logger</title>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+			
+			mflyCommands.getInteractiveInfo().done(function(info) {
+            	$('#interactiveInfo').val(JSON.stringify(info, null, 4));
+			});
+		</script>
+		<style type="text/css">
+			.exit			{ background:#ccc; padding:15px; }
+            code            { white-space: pre; }
+		</style>
+	</head>
+
+	<body>
+		<button onclick="mflyCommands.previous();" class="exit">Previous</button>
+
+        <button onclick="mflyCommands.next();" class="exit">Next</button>
+        <div style="margin-top: 20px;">getInteractiveInfo():</div>
+        <textarea id="interactiveInfo" rows="40" cols="90"></textarea>
+	</body>
+</html>

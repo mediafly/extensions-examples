@@ -1,0 +1,24 @@
+{
+  "name": "mediafly-interactives-tools-and-examples",
+  "version": "1.0.0",
+  "description": "## Overview",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "find . -type d -name 'bower_components' -exec rm -r '{}' +",
+    "bower": "find . -type f -name 'bower.json' | xargs echo"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-shell": "^0.4.1",
+    "gulp-util": "^3.0.4"
+  }
+}

@@ -1,0 +1,481 @@
+{
+    "__live__": {
+        "autoStart": false,
+        "id": "__live__",
+        "items": null,
+        "name": "Live Events",
+        "thumbnailUrl": null,
+        "type": "folder",
+        "url": "mfly://control/folder/__live__"
+    },
+    "__root__": {
+        "autoStart": false,
+        "id": "__root__",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131112",
+            "fb568c0d0873472690cfe8ba857943a0product131094",
+            "fb568c0d0873472690cfe8ba857943a0productmyitems"
+        ],
+        "name": "Topcoder Interactive Development Sandbox",
+        "thumbnailUrl": null,
+        "type": "folder",
+        "url": "mfly://control/folder/__root__"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product130675": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0product130675",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131095",
+            "fb568c0d0873472690cfe8ba857943a0product131099"
+        ],
+        "name": "Autumn Love",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product130675",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product130675"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product130676": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0product130676",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131105"
+        ],
+        "name": "In The Mountains",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product130676",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product130676"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product130682": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0product130682",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131317",
+            "fb568c0d0873472690cfe8ba857943a0product131318"
+        ],
+        "name": "Tipping the Scale",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product130682",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product130682"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product130778": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product130778",
+        "launched": false,
+        "name": "Episode 3",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product130778",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product130778"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131094": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0product131094",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product130675",
+            "fb568c0d0873472690cfe8ba857943a0product130676",
+            "fb568c0d0873472690cfe8ba857943a0product130682"
+        ],
+        "name": "TV",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131094",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131094"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131095": {
+        "autoStart": false,
+        "description": " ",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131095",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131097",
+            "fb568c0d0873472690cfe8ba857943a0product131096",
+            "fb568c0d0873472690cfe8ba857943a0product130778"
+        ],
+        "name": "Season 1",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131095",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131095"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131096": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131096",
+        "launched": false,
+        "name": "Episode 2",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131096",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131096"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131097": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131097",
+        "launched": false,
+        "name": "Episode 1",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131097",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131097"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131099": {
+        "autoStart": false,
+        "description": " ",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131099",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131104",
+            "fb568c0d0873472690cfe8ba857943a0product131103",
+            "fb568c0d0873472690cfe8ba857943a0product131102",
+            "fb568c0d0873472690cfe8ba857943a0product131101",
+            "fb568c0d0873472690cfe8ba857943a0product131100"
+        ],
+        "name": "Season 2",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131099",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131099"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131100": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131100",
+        "launched": false,
+        "name": "Episode 5",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:56:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131100",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131100"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131101": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131101",
+        "launched": false,
+        "name": "Episode 4",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:56:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131101",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131101"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131102": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131102",
+        "launched": false,
+        "name": "Episode 3",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:56:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131102",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131102"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131103": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131103",
+        "launched": false,
+        "name": "Episode 2",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:56:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131103",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131103"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131104": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131104",
+        "launched": false,
+        "name": "Episode 1",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:56:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131104",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131104"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131105": {
+        "autoStart": false,
+        "description": " ",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131105",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131111",
+            "fb568c0d0873472690cfe8ba857943a0product131110",
+            "fb568c0d0873472690cfe8ba857943a0product131109",
+            "fb568c0d0873472690cfe8ba857943a0product131108",
+            "fb568c0d0873472690cfe8ba857943a0product131107",
+            "fb568c0d0873472690cfe8ba857943a0product131106"
+        ],
+        "name": "Season 1",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131105",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131105"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131106": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131106",
+        "launched": false,
+        "name": "Episode 4",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131106",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131106"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131107": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131107",
+        "launched": false,
+        "name": "Episode 5",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131107",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131107"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131108": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131108",
+        "launched": false,
+        "name": "Episode 6",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131108",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131108"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131109": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131109",
+        "launched": false,
+        "name": "Episode 1",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131109",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131109"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131110": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131110",
+        "launched": false,
+        "name": "Episode 2",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131110",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131110"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131111": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131111",
+        "launched": false,
+        "name": "Episode 3",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131111",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131111"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131112": {
+        "autoStart": false,
+        "description": " ",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131112",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131114",
+            "fb568c0d0873472690cfe8ba857943a0product131113"
+        ],
+        "name": "Movies",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131112",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131112"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131113": {
+        "autoStart": false,
+        "description": " ",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131113",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131115"
+        ],
+        "name": "Transit Bandit",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131113",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131113"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131114": {
+        "autoStart": false,
+        "description": " ",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131114",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131116"
+        ],
+        "name": "... A Sky Less Cloudy",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131114",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131114"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131115": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131115",
+        "launched": false,
+        "name": "Transit Bandit",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:54:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131115",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131115"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131116": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131116",
+        "launched": false,
+        "name": "A Sky Less Cloudy",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:37:53:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131116",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131116"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131315": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131315",
+        "launched": true,
+        "name": "logger",
+        "progress": "1.000000",
+        "received": "2014-08-29T02:37:53:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131315",
+        "type": "zip",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131315"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131317": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0product131317",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131327",
+            "fb568c0d0873472690cfe8ba857943a0product131326",
+            "fb568c0d0873472690cfe8ba857943a0product131325"
+        ],
+        "name": "Season 1",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131317",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131317"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131318": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0product131318",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131324",
+            "fb568c0d0873472690cfe8ba857943a0product131323",
+            "fb568c0d0873472690cfe8ba857943a0product131322"
+        ],
+        "name": "Season 2",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131318",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product131318"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131322": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131322",
+        "launched": false,
+        "name": "Episode 1",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:41:33:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131322",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131322"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131323": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131323",
+        "launched": false,
+        "name": "Episode 2",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:41:33:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131323",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131323"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131324": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131324",
+        "launched": false,
+        "name": "Episode 3",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:41:33:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131324",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131324"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131325": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131325",
+        "launched": false,
+        "name": "Episode 1",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:41:33:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131325",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131325"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131326": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131326",
+        "launched": false,
+        "name": "Episode 2",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:41:33:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131326",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131326"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product131327": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "fb568c0d0873472690cfe8ba857943a0product131327",
+        "launched": false,
+        "name": "Episode 3",
+        "progress": "0.000000",
+        "received": "2014-08-29T02:41:33:00-0500",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0product131327",
+        "type": "Video",
+        "url": "mfly://control/item/fb568c0d0873472690cfe8ba857943a0product131327"
+    },
+    "fb568c0d0873472690cfe8ba857943a0productmyitems": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0productmyitems",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131315"
+        ],
+        "name": "My Items",
+        "thumbnailUrl": "mfly://data/image/fb568c0d0873472690cfe8ba857943a0productmyitems",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0productmyitems"
+    },
+    "fb568c0d0873472690cfe8ba857943a0product153299": {
+        "autoStart": false,
+        "id": "fb568c0d0873472690cfe8ba857943a0product153299",
+        "items": [
+            "fb568c0d0873472690cfe8ba857943a0product131315"
+        ],
+        "name": "Big Buck Bunny - The TV Show",
+        "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/bbb-splash.png",
+        "type": "folder",
+        "url": "mfly://control/folder/fb568c0d0873472690cfe8ba857943a0product153299"
+    },
+    "version": 2
+}

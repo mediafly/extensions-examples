@@ -1,0 +1,12 @@
+{
+  "name": "Previous Next",
+  "version": "0.0.1",
+  "authors": [
+    "nachiket mehta <nmehta@mediafly.com>"
+  ],
+  "description": "mflyCommands Previous() Next() example",
+  "license": "MIT",
+  "dependencies": {
+    "mfly-commands": "~1.9"
+  }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
+		<script type="text/javascript">
+            var this_id = 'THIS_ID_TO_BE_POPULATED_BY_MFLYDATAINIT';
+
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+            function getCollections() {
+                mflyCommands.getCollections()
+                        .done(function(data) {
+                            $("#collections_list").html(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                        });
+            }
+
+            function getCollection() {
+                mflyCommands.getCollection($("#getCollection_id").val())
+                        .done(function(data) {
+                            $("#getCollection_response").html(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                        });
+            }
+
+            function createCollection() {
+                mflyCommands.createCollection($("#createCollection_name").val())
+                        .done(function(data) {
+                            $("#createCollection_response").html(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                        })
+						.fail(function (data) {
+							$("#createCollection_response").html(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+						});
+            }
+
+            function addItemToCollection() {
+                mflyCommands.addItemToCollection($("#add_collection").val(), $("#add_item").val())
+                        .done(function(data) {
+                            $("#add_response").html("Add successful.<br>&nbsp;<br>");
+                        }).fail(function(xhr, status, error) {
+                            $("#add_response").html("Add failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                        });
+			}
+
+			function removeItemFromCollection() {
+                mflyCommands.removeItemFromCollection($("#remove_collection").val(), $("#remove_item").val())
+                        .done(function(data) {
+                            $("#remove_response").html("Remove successful.<br>&nbsp;<br>");
+                        }).fail(function(xhr, status, error) {
+                            $("#remove_response").html("Remove failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                        });
+            }
+
+			function deleteCollection() {
+                mflyCommands.deleteCollection($("#delete_collection").val())
+                        .done(function(data) {
+                            $("#delete_response").html("Delete successful.<br>&nbsp;<br>");
+                        }).fail(function(xhr, status, error) {
+                            $("#delete_response").html("Delete failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                        });
+            }
+
+			function removeSharedCollection() {
+                mflyCommands.deleteCollection($("#shared_collection").val(), true)
+                        .done(function(data) {
+                            $("#remove_shared_response").html("Remove successful.<br>&nbsp;<br>");
+                        }).fail(function(xhr, status, error) {
+                            $("#remove_shared_response").html("Remove failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                        });
+            }
+
+			function reorderItemInCollection() {
+                mflyCommands.reorderItemInCollection($("#reorder_collection").val(), $("#reorder_item").val(), $("#reorder_position").val())
+                        .done(function(data) {
+                            $("#reorder_response").html("Reorder successful.<br>&nbsp;<br>");
+                        }).fail(function(xhr, status, error) {
+                            $("#reorder_response").html("Reorder failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                        });
+            }
+
+			function renameCollection() {
+                mflyCommands.renameCollection($("#rename_collection").val(), $("#newname").val())
+                        .done(function(data) {
+                            $("#rename_response").html("Rename successful.<br>&nbsp;<br>");
+                        }).fail(function(xhr, status, error) {
+                            $("#rename_response").html("Rename failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                        });
+            }
+
+            $(document).ready(function() {
+                mflyCommands.getInteractiveInfo().done(function(data) {
+                    this_id=data['id'];
+                    $("#item").html(this_id);
+                    $("#add_item").val(this_id);
+                });
+            });
+		</script>
+	</head>
+
+	<body>
+    <h1>Collections</h1>
+    <hr>
+    <div>
+        <button class="showCollections button" onclick="mflyCommands.showCollections(600, 10, 20, 20);">
+            Show Collections (invoke app's Collections list)
+        </button>
+    </div>
+    <hr>
+    <div>
+        <button class="showAddToCollection button" onclick="mflyCommands.showAddToCollection(this_id, 240, 207, 20, 20);">
+            Show Add to Collections for this item
+        </button>
+        <p>(Item: <span id="item"></span>)</p>
+    </div>
+    <hr>
+    <div>
+        Name the new Collection: <input type="text" id="createCollection_name" value="Collection Name"> &nbsp;
+        <button class="createCollection button" onclick="createCollection();">
+            Create the Collection
+        </button>
+        <p>Response:</p>
+        <code id="createCollection_response"></code>
+    </div>
+
+    <div>
+        Item to add to Collection: <input type="text" id="add_item" value="ItemNameEg123"> &nbsp;
+        Collection to which Item should be added: <input type="text" id="add_collection" value="[Collection ID]">
+        <button class="createCollection button" onclick="addItemToCollection();">
+            Add the item to the Collection
+        </button>
+        <p>Response:</p>
+        <code id="add_response"></code>
+    </div>
+
+	<div>
+        Remove Item from Collection: <input type="text" id="remove_item" value="ItemNameEg123"> &nbsp;
+        Collection from which Item should be removed: <input type="text" id="remove_collection" value="[Collection ID]">
+        <button class="createCollection button" onclick="removeItemFromCollection();">
+            Remove the item from the Collection
+        </button>
+        <p>Response:</p>
+        <code id="remove_response"></code>
+    </div>
+
+	<div>
+        Delete Collection: <input type="text" id="delete_collection" value="[Collection ID]"> &nbsp;
+        <button class="createCollection button" onclick="deleteCollection();">
+            Delete Collection
+        </button>
+        <p>Response:</p>
+        <code id="delete_response"></code>
+    </div>
+
+	<div>
+        Remove Shared Collection: <input type="text" id="shared_collection" value="[Collection ID]"> &nbsp;
+        <button class="createCollection button" onclick="removeSharedCollection();">
+            Remove Shared Collection
+        </button>
+        <p>Response:</p>
+        <code id="remove_shared_response"></code>
+    </div>
+
+	<div>
+        Reorder item in collection: <input type="text" id="reorder_collection" value="[Collection ID]"> &nbsp;
+		Item to reorder: <input type="text" id="reorder_item" value="[Item ID]"> &nbsp;
+		Position: <input type="text" id="reorder_position" value="[Position]">
+        <button class="createCollection button" onclick="reorderItemInCollection();">
+            Reorder item in Collection
+        </button>
+        <p>Response:</p>
+        <code id="reorder_response"></code>
+    </div>
+
+	<div>
+        Rename Collection: <input type="text" id="rename_collection" value="[Collection ID]"> &nbsp;
+        New name: <input type="text" id="newname" value="[New Name]">
+        <button class="createCollection button" onclick="renameCollection();">
+            Rename the Collection
+        </button>
+        <p>Response:</p>
+        <code id="rename_response"></code>
+    </div>
+
+    <hr>
+    <div>
+        <button class="getCollections button" onclick="getCollections();">
+            Get the list of Collections in the app
+        </button>
+        <p>If you don't have any Collections, be sure to create some first.</p>
+        <p>List of collections:</p>
+        <code id="collections_list"></code>
+    </div>
+    <hr>
+    <div>
+        ID of Collection to retrieve: <input type="text" id="getCollection_id" value="[id]"> &nbsp;
+        <button class="getCollection button" onclick="getCollection();">
+            Get Collection contents
+        </button>
+        <p>Response:</p>
+        <code id="getCollection_response"></code>
+    </div>
+
+    <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

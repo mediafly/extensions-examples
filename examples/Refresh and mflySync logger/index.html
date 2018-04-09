@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Refresh and mflySync logger</title>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+            // usage: log('inside coolFunc',this,arguments);
+            // http://paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
+            window.log = function(){
+                log.history = log.history || [];   // store logs to an array for reference
+                log.history.push(arguments);
+                if(this.console){
+                    console.log( Array.prototype.slice.call(arguments) );
+                }
+            };
+
+            var mflySyncArray = [];
+
+			$(document).ready(function () {
+				$(document).on("touchstart", ".exit", function () {
+                    mflyCommands.close();
+				});
+                $(document).on("touchstart", ".refresh", function() {
+                    log("Refresh initiated.");
+                    mflyCommands.refresh();
+                });
+			});
+
+			function mflySync (_array) {
+				log("mflySync; array=", _array);
+                mflySyncArray.push(_array);
+				$("#mflysync").html(JSON.stringify(_array, null));
+			}
+
+			function mflyDataInit (_params) {
+				return '{ "mflyInitVersion" : "3" }';
+			}
+
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+		</script>
+		<style type="text/css">
+			.exit	    { background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+            .refresh	{ background:#ccc; padding:15px; position:absolute; right:100px; top:20px; }
+		</style>
+	</head>
+
+	<body>
+        <h3>mflySync</h3>
+		<div class="exit">Exit</div>
+        <div class="refresh">Refresh</div>
+        <div id="mflysync"></div>
+	</body>
+</html>

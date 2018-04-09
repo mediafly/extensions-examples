@@ -1,0 +1,23 @@
+{
+  "name": "Generic",
+  "authors": [
+    "nachiket mehta <nmehta@mediafly.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mfly-commands": "^1.10.0",
+    "highlightjs": "^9.2.0",
+    "bootstrap": "^3.3.6"
+  }
+}

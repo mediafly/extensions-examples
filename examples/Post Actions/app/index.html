@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+			$(document).ready(function () {
+				$("#postaction").on('click', function() {
+					var options = {};
+					var k1 = $("#key1").val();
+					var v1 = $("#value1").val();
+					var k2 = $("#key2").val();
+					var v2 = $("#value2").val();
+					var k3 = $("#key3").val();
+					var v3 = $("#value3").val();
+
+					if (k1 && v1) {
+						options[k1] = v1;
+					}
+					if (k2 && v2) {
+						options[k2] = v2;
+					}
+					if (k3 && v3) {
+						options[k3] = v3;
+					}
+
+					mflyCommands.postAction(options)
+						.done(function(data) {
+							var h = JSON.stringify(data, null, 2);
+							$('#result').html(h);
+						})
+						.fail(function(xhr, status) {
+							$('#result').html("FAILURE!<br/>" + status[0] + " " + status[1]);
+						});
+	            })
+			});
+
+		</script>
+		<style type="text/css">
+			div[id]					{ background:#ccc; padding:20px; margin:50px 20px 0 0; float:left; }
+			.exit					{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+            .logs                   { white-space: pre; }
+		</style>
+	</head>
+
+	<body>
+		<h1>Post Action</h1>
+        <p>Enter key and value pairs for posting an action</p>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input class="key" id="key1" style="width: 100%" value="type"></td>
+                <td>
+                    <input class="value" id="value1" style="width: 70%" value="document">
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input class="key" id="key2" style="width: 100%" value="id"></td>
+                <td>
+                    <input class="value" id="value2" style="width: 70%" value="9cf282320e6340ee8b830e5376d54531product91929">
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input class="key" id="key3" style="width: 100%"></td>
+                <td>
+                    <input class="value" id="value3" style="width: 70%">
+                </td>
+            </tr>
+        </table>
+        <button id="postaction">Post Action</button>
+		<h3>Result:</h3>
+        <code id="result"></code>
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

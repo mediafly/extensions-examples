@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+			
+            function getGps() {
+                mflyCommands.getGpsCoordinates().done(function (data) {
+                    console.log(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                    $("#coordinates").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                });
+            }
+		</script>
+	</head>
+
+	<body>
+		<h1>GPS</h1>
+        <button id="getgps" onclick="getGps();">Get GPS coordinates</button>
+        <div id="coordinates"></div>
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

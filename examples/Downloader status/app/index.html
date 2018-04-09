@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
+		<script type="text/javascript">
+            var HOSTNAME = window.location.origin.indexOf('localhost') > 0 ? "http://localhost:8000/" : "mfly://";
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+            mflyCommands.setPrefix(HOSTNAME);
+
+            var id = 'TO_BE_POPULATED';
+
+			$(document).ready(function () {
+				$(document).on("touchstart", ".exit", function () {
+					window.open(HOSTNAME + "control/done");
+                });
+
+                $(document).on("touchstart", ".getDownloadStatus", function () {
+                    mflyCommands.getDownloadStatus()
+                            .done(function(data) {
+                                console.log(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                                $("#logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                            });
+                });
+
+
+                $(document).on("touchstart", ".getItemDownloadStatus", function () {
+                    mflyCommands.getDownloadStatus(id)
+                            .done(function(data) {
+                                console.log(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                                $("#logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                            });
+                });
+
+                $(document).on("touchstart", ".showNativeDownloaderUi", function () {
+                    mflyCommands.showDownloader(600, 10, 20, 20);
+                })
+			});
+
+            function mflyDataInit(data) {
+                // If this is running in development mode, adjust flags and prefixes appropriately
+                if (data['osType'] != 'Development') {
+                    HOSTNAME = "mfly://";
+                    mflyCommands.setPrefix(HOSTNAME);
+                }
+                // Initialize things here, if necessary.
+
+                id = data['id'];
+
+                return { 'mflyInitVersion': '4' }
+            }
+
+            function mflyDownloadStatus(_value) {
+                $(".error span").html(_value.error);
+                $(".progress span").html(_value.progress);
+            }
+            function mflyDownloadStatusForItem(_id, _value) {
+                $("#logs").append("mflyDownloadStatusForItem: id=" + _id + "  value=" + _value);
+            }
+
+
+            function mflyResume() {
+                // Interactive resuming here. Handle if necessary.
+                console.log('mflyResume');
+            }
+
+            function mflySync(data) {
+                // As knowledge about folders and items changes, this function gets called by the app.
+                // data is a JSON array of JSON objects, where each object is the new item or folder.
+                // You probably should iterate through data and update internal models or UI if any of those items
+                // are showing.
+            }
+
+		</script>
+	</head>
+
+	<body>
+    <h3>mflyDownloadStatus</h3>
+    <div class="mflyDownloadStatus">
+        <div class="error">
+            Error: <span></span>
+        </div>
+        <div class="progress">
+            Progress: <span></span>
+        </div>
+    </div>
+
+    <div>
+        <h3>Controls</h3>
+        <button class="getDownloadStatus button">
+            Get download status
+        </button>
+        <button class="getItemDownloadStatus button">
+            Get download status of this interactive
+        </button>
+        <button class="showNativeDownloaderUi button">
+            Show Native Downloader UI
+        </button>
+    </div>
+    <div id="logs"></div>
+		<div class="exit">Exit</div>
+	</body>
+</html>

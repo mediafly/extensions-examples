@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Online Offline Status</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+            var HOSTNAME = window.location.origin.indexOf('localhost') > 0 ? "http://localhost:8000/" : "mfly://";
+            mflyCommands.setPrefix(HOSTNAME);
+
+			$(document).ready(function () {
+				$(document).on("touchstart", ".exit", function () {
+					window.open(HOSTNAME + "control/done");
+                });
+
+                if (HOSTNAME.indexOf('localhost') > 0) {
+                    // Local development version
+                    $('.onlineStatusController').show();
+                }
+
+                $("#getonlinestatus").click(function() {
+                    $("#status").html("Loading status...");
+                    mflyCommands.getOnlineStatus()
+                            .done(function(data) {
+                                console.log(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                                $("#status").html(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>")
+                            });
+                });
+			});
+
+            function mflyDataInit(data) {
+                // If this is running in development mode, adjust flags and prefixes appropriately
+                if (data['osType'] != 'Development') {
+                    HOSTNAME = "mfly://";
+                    mflyCommands.setPrefix(HOSTNAME);
+                }
+
+                return { 'mflyInitVersion': '3', 'mflyWideScreenSupport': true }
+            }
+
+            function mflyResume() {
+                // Interactive resuming here. Handle if necessary.
+                console.log('mflyResume');
+            }
+
+            function mflyInit(data) {
+                // Handle mflyInit, if necessary. Note: mflyInit is largely unnecessary with mfly://data/folder.
+                console.log('mflyInit: data=', data);
+            }
+
+            function setOnlineStatus(isOnline) {
+
+            }
+
+		</script>
+	</head>
+
+	<body>
+        <h1>Online Status</h1>
+        <div><button id="getonlinestatus">Get Online Status</button></div>
+        <div id="status"></div>
+        <div class="exit">Exit</div>
+        <div class="onlineStatusController" style="display:none;">
+            <h3>Online Status Controller</h3>
+            <p><i>This block only appears in browser development mode.</i></p>
+            <div>Set online status to: <button onclick="mflyDeveloperTools.setOnlineStatus(true);">Online</button> &nbsp; <button onclick="mflyDeveloperTools.setOnlineStatus(false);">Offline</button></div>
+        </div>
+	</body>
+</html>

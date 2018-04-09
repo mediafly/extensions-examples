@@ -1,0 +1,545 @@
+{
+    "9cf282320e6340ee8b830e5376d54531product104048": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product104048",
+        "launched": true,
+        "name": "data",
+        "progress": "1.000000",
+        "received": "2014-07-25T09:08:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product104048",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product104048"
+    },
+    "9cf282320e6340ee8b830e5376d54531product108530": {
+        "autoStart": false,
+        "description": "Root Folder",
+        "id": "9cf282320e6340ee8b830e5376d54531product108530",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product113842"
+        ],
+        "name": "Root",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product108530",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product108530"
+    },
+    "9cf282320e6340ee8b830e5376d54531product113842": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product113842",
+        "launched": false,
+        "name": "GPS",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:58:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product113842",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product113842"
+    },
+    "9cf282320e6340ee8b830e5376d54531product119054": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product119054",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product119311",
+            "9cf282320e6340ee8b830e5376d54531product119160",
+            "9cf282320e6340ee8b830e5376d54531product140689",
+            "9cf282320e6340ee8b830e5376d54531product140687",
+            "9cf282320e6340ee8b830e5376d54531product140688",
+            "9cf282320e6340ee8b830e5376d54531product153624"
+        ],
+        "name": "Embed and Data Items",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product119054",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product119054"
+    },
+    "9cf282320e6340ee8b830e5376d54531product140689": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "id": "9cf282320e6340ee8b830e5376d54531product140689",
+        "launched": false,
+        "name": "JSON Data Item",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:58:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product140689",
+        "type": "data",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product140689"
+    },
+    "9cf282320e6340ee8b830e5376d54531product140687": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "id": "9cf282320e6340ee8b830e5376d54531product140687",
+        "launched": false,
+        "name": "CSV Data Item",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:58:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product140687",
+        "type": "data",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product140687"
+    },
+    "9cf282320e6340ee8b830e5376d54531product140688": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "id": "9cf282320e6340ee8b830e5376d54531product140688",
+        "launched": false,
+        "name": "XML Data Item",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:58:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product140688",
+        "type": "data",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product140688"
+    },
+    "9cf282320e6340ee8b830e5376d54531product153624": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "id": "9cf282320e6340ee8b830e5376d54531product153624",
+        "launched": false,
+        "name": "Test PDF",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:58:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product153624",
+        "type": "pdf",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product153624",
+        "pages": 6
+    },
+    "9cf282320e6340ee8b830e5376d54531product119160": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product119160",
+        "launched": false,
+        "name": "em",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:56:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product119160",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product119160"
+    },
+    "9cf282320e6340ee8b830e5376d54531product119311": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product119311",
+        "launched": false,
+        "name": "em2",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:56:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product119311",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product119311"
+    },
+    "9cf282320e6340ee8b830e5376d54531product122521": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product122521",
+        "launched": false,
+        "name": "index",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product122521",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product122521"
+    },
+    "9cf282320e6340ee8b830e5376d54531product124274": {
+        "autoStart": false,
+        "description": "This is an example of custom metadata. Custom metadata consists of arbitrary keys and values set up in Airship and passed through the apps into the Interactives.",
+        "id": "9cf282320e6340ee8b830e5376d54531product124274",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product124275",
+            "9cf282320e6340ee8b830e5376d54531product124276"
+        ],
+        "name": "Custom metadata",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product124274",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product124274"
+    },
+    "9cf282320e6340ee8b830e5376d54531product124275": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product124275",
+        "launched": false,
+        "name": "Custom Metadata",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:20:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product124275",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product124275"
+    },
+    "9cf282320e6340ee8b830e5376d54531product124276": {
+        "autoStart": false,
+        "description": "dateofevaluation=2014-07-25T09:15:00-05:00",
+        "id": "9cf282320e6340ee8b830e5376d54531product124276",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product124277",
+            "9cf282320e6340ee8b830e5376d54531product124278"
+        ],
+        "name": "Connected TV devices",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product124276",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product124276",
+        "dateofevaluation": "2014-07-25T09:15:00-05:00"
+    },
+    "9cf282320e6340ee8b830e5376d54531product124277": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "description": "desc=Chromecast is a digital media player developed by Google. The device, a 2.83-inch (72 mm) HDMI dongle, plays audio/video content on a high-definition display by directly streaming it via Wi-Fi from the Internet or a local network.\nprice=35\ntechnologies=miracast\nsegment=consumer",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product124277",
+        "launched": false,
+        "name": "Chromecast",
+        "desc": "Chromecast is a digital media player developed by Google. The device, a 2.83-inch (72 mm) HDMI dongle, plays audio/video content on a high-definition display by directly streaming it via Wi-Fi from the Internet or a local network.",
+        "price": "35",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:51:08:00-0500",
+        "segment": "consumer",
+        "technologies": "miracast",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product124277",
+        "type": "image",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product124277"
+    },
+    "9cf282320e6340ee8b830e5376d54531product124278": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "description": "desc=Apple TV is a digital media player developed and sold by Apple Inc. It is a small network appliance and entertainment device that can receive digital data from a number of sources and stream it to capable TV for playing on the TV screen.\nprice=99\ntechnologies=proprietary\nsegment=consumer",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product124278",
+        "launched": false,
+        "name": "AppleTV",
+        "price": "99",
+        "desc": "Apple TV is a digital media player developed and sold by Apple Inc. It is a small network appliance and entertainment device that can receive digital data from a number of sources and stream it to capable TV for playing on the TV screen.",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:51:08:00-0500",
+        "segment": "consumer",
+        "technologies": "proprietary",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product124278",
+        "type": "image",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product124278"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91919": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91919",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91934"
+        ],
+        "name": "mflyInit + mflyDataInit logger",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91919",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91919"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91920": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product91920",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91936"
+        ],
+        "name": "Save and retrieve data",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91920",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91920"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91921": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91921",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91931"
+        ],
+        "name": "Get Folder and Get Item",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91921",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91921"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91922": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product91922",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91935"
+        ],
+        "name": "Incremental search",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91922",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91922"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91923": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91923",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91933",
+            "9cf282320e6340ee8b830e5376d54531product94606",
+            "9cf282320e6340ee8b830e5376d54531product91932",
+            "9cf282320e6340ee8b830e5376d54531product94607"
+        ],
+        "name": "Links",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91923",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91923"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91925": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product91925",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product122521",
+            "9cf282320e6340ee8b830e5376d54531product119054",
+            "9cf282320e6340ee8b830e5376d54531product91930",
+            "9cf282320e6340ee8b830e5376d54531product91929",
+            "9cf282320e6340ee8b830e5376d54531product91928",
+            "9cf282320e6340ee8b830e5376d54531product104048"
+        ],
+        "name": "Embed and Data Items",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91925",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91925"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91926": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91926",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91927"
+        ],
+        "name": "Downloader status",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91926",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91926"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91927": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91927",
+        "launched": false,
+        "name": "Downloader status",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:54:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91927",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91927"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91928": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91928",
+        "launched": false,
+        "name": "Embedded Interactive",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91928",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91928"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91929": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91929",
+        "launched": false,
+        "name": "Embedded image - Space cat",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91929",
+        "type": "image",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91929"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91930": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91930",
+        "launched": false,
+        "name": "Embed example",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:55:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91930",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91930"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91931": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91931",
+        "launched": true,
+        "name": "Get Folder and Get Item",
+        "progress": "1.000000",
+        "received": "2014-07-25T09:08:54:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91931",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91931"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91932": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91932",
+        "launched": false,
+        "name": "http://www.google.com",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:52:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91932",
+        "type": "html",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91932"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91933": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91933",
+        "launched": false,
+        "name": "Links",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:52:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91933",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91933"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91934": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91934",
+        "launched": true,
+        "name": "mflyInit and mflyDataInit logger",
+        "progress": "1.000000",
+        "received": "2014-07-25T09:08:53:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91934",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91934"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91935": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91935",
+        "launched": false,
+        "name": "PredictiveSearch",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91935",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91935"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91936": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91936",
+        "launched": false,
+        "name": "Save and retrieve data",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:54:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91936",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91936"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91937": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91937",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91938"
+        ],
+        "name": "Widescreen Interactive and Second Screen Options",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91937",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91937"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91938": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product91938",
+        "launched": false,
+        "name": "Widescreen and Second Screen Options",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91938",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91938"
+    },
+    "9cf282320e6340ee8b830e5376d54531product92427": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product92427",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product92428"
+        ],
+        "name": "Swipe",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product92427",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product92427"
+    },
+    "9cf282320e6340ee8b830e5376d54531product92428": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product92428",
+        "launched": false,
+        "name": "Swipe",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:57:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product92428",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product92428"
+    },
+    "9cf282320e6340ee8b830e5376d54531product94606": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableShareable",
+        "id": "9cf282320e6340ee8b830e5376d54531product94606",
+        "launched": false,
+        "name": "Acme Anvil Company.v1",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:52:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product94606",
+        "type": "pdf",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product94606"
+    },
+    "9cf282320e6340ee8b830e5376d54531product94607": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product94607",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product94609",
+            "9cf282320e6340ee8b830e5376d54531product94608"
+        ],
+        "name": "Links",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product94607",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product94607"
+    },
+    "9cf282320e6340ee8b830e5376d54531product94608": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableProtected",
+        "id": "9cf282320e6340ee8b830e5376d54531product94608",
+        "launched": false,
+        "name": "Slide2",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:52:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product94608",
+        "type": "image",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product94608"
+    },
+    "9cf282320e6340ee8b830e5376d54531product94609": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "downloadModel": "DownloadableProtected",
+        "id": "9cf282320e6340ee8b830e5376d54531product94609",
+        "launched": false,
+        "name": "Slide1",
+        "progress": "0.000000",
+        "received": "2014-07-25T09:08:52:00-0500",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product94609",
+        "type": "image",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product94609"
+    },
+    "__live__": {
+        "autoStart": false,
+        "id": "__live__",
+        "items": null,
+        "name": "Live Events",
+        "thumbnailUrl": null,
+        "type": "folder",
+        "url": "mfly://control/folder/__live__"
+    },
+    "__root__": {
+        "autoStart": false,
+        "id": "__root__",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91923",
+            "9cf282320e6340ee8b830e5376d54531product91921",
+            "9cf282320e6340ee8b830e5376d54531product91919",
+            "9cf282320e6340ee8b830e5376d54531product91920",
+            "9cf282320e6340ee8b830e5376d54531product91926",
+            "9cf282320e6340ee8b830e5376d54531product91925",
+            "9cf282320e6340ee8b830e5376d54531product124274",
+            "9cf282320e6340ee8b830e5376d54531product91937",
+            "9cf282320e6340ee8b830e5376d54531product91922",
+            "9cf282320e6340ee8b830e5376d54531product92427",
+            "9cf282320e6340ee8b830e5376d54531product108530"
+        ],
+        "name": "Interactives",
+        "thumbnailUrl": null,
+        "type": "folder",
+        "url": "mfly://control/folder/__root__"
+    },
+    "version": 2
+}

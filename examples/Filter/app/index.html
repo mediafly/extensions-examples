@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+			$(document).ready(function () {
+                $("#filter").on('click', function(e) {
+                    var k1 = $("#key1").val();
+                    var v1 = $("#value1").val();
+                    var vt1 = $("#valuetype1").val();
+                    var k2 = $("#key2").val();
+                    var v2 = $("#value2").val();
+                    var vt2 = $("#valuetype2").val();
+                    var k3 = $("#key3").val();
+                    var v3 = $("#value3").val();
+                    var vt3 = $("#valuetype3").val();
+
+                    var obj = {};
+                    if (k1 && v1) {
+                        if (vt1 == "Number") {
+                            v1 = Number(v1);
+                        } else if (vt1 == "Boolean") {
+                            if (v1 == "true") v1 = true;
+                            if (v1 == "false") v1 = false;
+                        }
+                        obj[k1] = v1;
+                    }
+                    if (k2 && v2) {
+                        if (vt2 == "Number") {
+                            v2 = Number(v2);
+                        } else if (vt2 == "Boolean") {
+                            if (v2 == "true") v2 = true;
+                            if (v2 == "false") v2 = false;
+                        }
+                        obj[k2] = v2;
+                    }
+                    if (k3 && v3) {
+                        if (vt3 == "Number") {
+                            v3 = Number(v3);
+                        } else if (vt3 == "Boolean") {
+                            if (v3 == "true") v3 = true;
+                            if (v3 == "false") v3 = false;
+                        }
+                        obj[k3] = v3;
+                    }
+
+                    console.log("Filtering, obj=", obj);
+
+
+                    mflyCommands.filter(obj)
+                            .done(function(data) {
+                                var h = JSON.stringify(data, null, 2);
+                                $('#result').html(h);
+                            })
+                            .fail(function(xhr, status) {
+                                $('#result').html("FAILURE!<br/>" + status[0] + " " + status[1]);
+                            });
+                });
+			});
+
+            function fillWithDebugValues() {
+                $("#key1").val('type');
+                $("#key2").val('counter');
+                $("#key3").val('autoStart');
+                $("#value1").val('folder');
+                $("#value2").val('4');
+                $("#value3").val('true');
+                $("#valuetype2").val('Number');
+                $("#valuetype3").val('Boolean');
+            }
+		</script>
+	</head>
+
+	<body>
+        <h1>Filter</h1>
+        <p>Enter key and value pairs to filter hierarchy</p>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input class="key" id="key1" style="width: 100%"></td>
+                <td>
+                    <input class="value" id="value1" style="width: 70%">
+                    <select id="valuetype1"><option>String</option><option>Number</option><option>Boolean</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input class="key" id="key2" style="width: 100%"></td>
+                <td>
+                    <input class="value" id="value2" style="width: 70%">
+                    <select id="valuetype2"><option>String</option><option>Number</option><option>Boolean</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input class="key" id="key3" style="width: 100%"></td>
+                <td>
+                    <input class="value" id="value3" style="width: 70%">
+                    <select id="valuetype3"><option>String</option><option>Number</option><option>Boolean</option></select>
+                </td>
+            </tr>
+        </table>
+        <button id="filter">Filter</button>
+        <button id="fillWithDebugValues" onclick="fillWithDebugValues();">Fill with debug values</button>
+		<h3>Result:</h3>
+        <code id="result"></code>
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

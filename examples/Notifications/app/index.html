@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notification</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+            function getStatus() {
+				var folderId = $('#getStatus_id').val();
+                mflyCommands.getNotificationStatus(folderId)
+                        .done(function(data) {
+                            $("#getStatus_response").html(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                        });
+            }
+
+			function addFolder() {
+				var folderId = $('#addFolder_id').val();
+                mflyCommands.addNotification(folderId)
+                        .done(function(data) {
+                            $("#addFolder_response").html('folder added for notifications.' + "<br>&nbsp;<br>");
+                        }).fail(function () {
+							$("#addFolder_response").html('Error adding folder for notifications.' + "<br>&nbsp;<br>");
+						});
+            }
+
+			function removeFolder() {
+				var folderId = $('#removeFolder_id').val();
+                mflyCommands.removeNotification(folderId)
+                        .done(function(data) {
+                            $("#removeFolder_response").html('folder removed from notifications.' + "<br>&nbsp;<br>");
+                        }).fail(function () {
+							$("#removeFolder_response").html('Error removing folder from notifications.' + "<br>&nbsp;<br>");
+						});
+            }
+		</script>
+	</head>
+
+	<body>
+    <h1>Notification</h1>
+    <hr>
+    <div>
+        Get notification status for a folder: <input type="text" id="getStatus_id" value="[id]"> &nbsp;
+        <button class="button" onclick="getStatus();">
+            Get Notification status
+        </button>
+        <p>Response:</p>
+        <code id="getStatus_response"></code>
+    </div>
+
+	<div>
+        Add a folder to notifications: <input type="text" id="addFolder_id" value="[id]"> &nbsp;
+        <button class="button" onclick="addFolder();">
+            Add folder to notifications
+        </button>
+        <p>Response:</p>
+        <code id="addFolder_response"></code>
+    </div>
+
+	<div>
+        Remove a folder from notifications: <input type="text" id="removeFolder_id" value="[id]"> &nbsp;
+        <button class="button" onclick="removeFolder();">
+            Remove folder from notifications
+        </button>
+        <p>Response:</p>
+        <code id="removeFolder_response"></code>
+    </div>
+
+    <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

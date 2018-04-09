@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>mflyInit logger</title>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <!--<script type="text/javascript" src="mflyTestRunner.js"></script>-->
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+			var areControlBarsOpen = false;
+            var mflyInitArray = 0;
+            var mflyDataInitParams = 0;
+
+			$(document).ready(function () {
+			});
+
+			function mflyInit (_array) {
+				console.log("mflyInit");
+				$("#mflyinit").val(JSON.stringify(_array, null));
+                mflyInitArray = _array;
+			}
+
+			function mflyDataInit (_params) {
+                mflyDataInitParams = _params;
+                $('#mflydatainit').html(JSON.stringify(_params, null, 2));
+				return '{ "mflyInitVersion" : "3", "mflyWideScreen" : "true" }';
+			}
+
+		</script>
+		<style type="text/css">
+			.exit			{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+            code            { white-space: pre; }
+		</style>
+	</head>
+
+	<body>
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+        <div>mflyDataInit:</div>
+        <code id="mflydatainit"></code>
+
+        <p>&nbsp;</p>
+
+        <div>mflyInit (DEPRECATED):</div>
+        <textarea id="mflyinit" rows="40" cols="90"></textarea>
+
+	</body>
+</html>

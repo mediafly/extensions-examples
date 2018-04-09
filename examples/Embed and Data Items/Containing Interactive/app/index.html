@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyPause() {
+
+			}
+
+			$(document).ready(function () {
+                mflyCommands.embed($('iframe#frame_embed'), '9cf282320e6340ee8b830e5376d54531product91928');
+                mflyCommands.embed($('img#img_embed'), '9cf282320e6340ee8b830e5376d54531product91929', null, '200x200');
+
+                // JSON data item
+                mflyCommands.getData('9cf282320e6340ee8b830e5376d54531product140689').done(function(_data, _status, _xhr) {
+                    var data = JSON.parse(_data);
+                    console.log('Retrieved: ', data);
+                    console.log('Retrieved: ', JSON.stringify(data));
+                    $("#dataitem_json").html(JSON.stringify(data));
+                });
+
+                // XML data item
+                mflyCommands.getData('9cf282320e6340ee8b830e5376d54531product140688').done(function(_data, _status, _xhr) {
+                    console.log('Retrieved: ', _data);
+                    $("#dataitem_xml").val(_data);
+                });
+
+                // CSV data item
+                mflyCommands.getData('9cf282320e6340ee8b830e5376d54531product140687').done(function(_data, _status, _xhr) {
+                    console.log('Retrieved: ', _data);
+                    $("#dataitem_csv").html(_data);
+                });
+
+								// ALE data item
+                mflyCommands.getData('9cf282320e6340ee8b830e5376d54531product210826').done(function(_data, _status, _xhr) {
+                    console.log('Retrieved: ', _data);
+                    $("#dataitem_ale").html(_data);
+                });
+
+                /**
+                 * Documents
+                 */
+                // Total number of pages in document
+                mflyCommands.getItem('9cf282320e6340ee8b830e5376d54531product153624').done(function(_data, _status, _xhr) {
+                    console.log('Retrieved: ', _data);
+                    $('#pages').html(_data['pages'])
+                });
+
+                // Page from document
+                //pdf
+                mflyCommands.embed($('#page1'), '9cf282320e6340ee8b830e5376d54531product153624', 3);
+                //doc
+                mflyCommands.embed($('#page2'), '9cf282320e6340ee8b830e5376d54531product237122', 1);
+                //ppt
+                mflyCommands.embed($('#page3'), '9cf282320e6340ee8b830e5376d54531product237454', 3);
+                //docx
+                mflyCommands.embed($('#page4'), '9cf282320e6340ee8b830e5376d54531product237455', 1);
+                //pptx
+                mflyCommands.embed($('#page5'), '9cf282320e6340ee8b830e5376d54531product237146', 1);
+			});
+
+            function mflyDataInit(data) {
+                // Pass this information into mflyCommands, in case mflyCommands needs it for anything.
+                //mflyCommands.mflyDataInit(data);
+
+                // Initialize things here, if necessary.
+
+
+                // Return this for iOS devices.
+                return { 'mflyInitVersion': '4' }
+            }
+
+            function mflyResume() {
+                // Interactive resuming here. Handle if necessary.
+                console.log('mflyResume');
+            }
+
+            function mflySync(data) {
+                // As knowledge about folders and items changes, this function gets called by the app.
+                // data is a JSON array of JSON objects, where each object is the new item or folder.
+                // You probably should iterate through data and update internal models or UI if any of those items
+                // are showing.
+            }
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Embed and Data Items</h1>
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+        <table>
+            <tr>
+                <th>Content</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td><img id="img_embed" src="loading.gif"></td>
+            </tr>
+            <tr>
+                <td>Another Interactive, into an iFrame</td>
+                <td>
+                    <iframe id="frame_embed" style="width:200px; height:200px;"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td>Data item: JSON</td>
+                <td><span id="dataitem_json">[retrieving]</span></div></td>
+            </tr>
+            <tr>
+                <td>Data item: CSV</td>
+                <td><span id="dataitem_csv">[retrieving]</span></td>
+            </tr>
+            <tr>
+                <td>Data item: XML</td>
+                <td><textarea style="width: 200px; height: 100px;" id="dataitem_xml">[retrieving]</textarea></td>
+            </tr>
+						<tr>
+                <td>Data item: ALE</td>
+                <td><textarea style="width: 200px; height: 100px;" id="dataitem_ale">[retrieving]</textarea></td>
+            </tr>
+            <tr>
+                <td>Documents: Number of pages</td>
+                <td><span id="pages">[retrieving]</span></td>
+            </tr>
+            <tr>
+                <td>Documents (PDF): Specific page</td>
+                <td><img id="page1" src="loading.gif" style="border: 1px solid; max-width: 400px;"></td>
+            </tr>
+            <tr>
+                <td>Documents (DOC): Specific page</td>
+                <td><img id="page2" src="loading.gif" style="border: 1px solid; max-width: 400px;"></td>
+            </tr>
+            <tr>
+                <td>Documents (PPT): Specific page</td>
+                <td><img id="page3" src="loading.gif" style="border: 1px solid; max-width: 400px;"></td>
+            </tr>
+            <tr>
+                <td>Documents (DOCX): Specific page</td>
+                <td><img id="page4" src="loading.gif" style="border: 1px solid; max-width: 400px;"></td>
+            </tr>
+            <tr>
+                <td>Documents (PPTX): Specific page</td>
+                <td><img id="page5" src="loading.gif" style="border: 1px solid; max-width: 400px;"></td>
+            </tr>
+            <tr>
+                <td>iFrame</td>
+                <td>
+                    <div style="overflow:hidden;width:500px;height:500px;resize:none;max-width:100%;"><div id="embedded-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=444+North+Michigan+Avenue,+Chicago,+IL,+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="embedded-map-html" rel="nofollow" href="https://www.dog-checks.com" id="make-map-data">www.dog-checks.com</a><style>#embedded-map-canvas img{max-width:none!important;background:none!important;}</style></div><script src="https://www.dog-checks.com/google-maps-authorization.js?id=25cffdf3-7408-a30f-8b1b-1a94e847fa71&c=embedded-map-html&u=1461683867" defer="defer" async="async"></script>
+                </td>
+            </tr>
+        </table>
+        <div style="clear: both;"></div>
+	</body>
+</html>

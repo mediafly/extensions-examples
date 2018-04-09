@@ -1,0 +1,43 @@
+{
+    "b1a1febacd6c4606963af7ed9cde2d24product85552": {
+        "autoStart": false,
+        "description": "",
+        "id": "b1a1febacd6c4606963af7ed9cde2d24product85552",
+        "items": [
+            "b1a1febacd6c4606963af7ed9cde2d24product85560"
+        ],
+        "name": "Folder",
+        "thumbnailUrl": "mfly://data/image/b1a1febacd6c4606963af7ed9cde2d24product85552",
+        "type": "folder",
+        "url": "mfly://folder/b1a1febacd6c4606963af7ed9cde2d24product85552",
+        "counter": 4,
+        "autoStart": true
+    },
+    "b1a1febacd6c4606963af7ed9cde2d24product85560": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "description": null,
+        "downloadModel": "DownloadableProtected",
+        "id": "b1a1febacd6c4606963af7ed9cde2d24product85560",
+        "launched": false,
+        "name": "Item",
+        "progress": "0.000000",
+        "received": "2013-06-28T10:49:30:00-0500",
+        "thumbnailUrl": "mfly://data/image/b1a1febacd6c4606963af7ed9cde2d24product85560",
+        "type": "pdf",
+        "url": "mfly://item/b1a1febacd6c4606963af7ed9cde2d24product85560"
+    },
+    "b1a1febacd6c4606963af7ed9cde2d24product85561": {
+        "date": "2000-12-31T06:00:00:00-0600",
+        "description": null,
+        "downloadModel": "DownloadableProtected",
+        "id": "b1a1febacd6c4606963af7ed9cde2d24product85561",
+        "launched": false,
+        "name": "Item 2",
+        "progress": "0.000000",
+        "received": "2013-06-28T10:49:30:00-0500",
+        "thumbnailUrl": "mfly://data/image/b1a1febacd6c4606963af7ed9cde2d24product85561",
+        "type": "video",
+        "url": "mfly://item/b1a1febacd6c4606963af7ed9cde2d24product85561"
+    },
+    "version": "2"
+}

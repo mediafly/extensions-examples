@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+        <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
+        <script>
+            $(document).ready(function() {
+               $("#getSyncStatus").on('click', function() {
+                   mflyCommands.getSyncStatus().done(function(data) {
+                       console.log('mflyCommands.getSyncStatus: data=', data);
+                       if (data) {
+                           var h = JSON.stringify(data, null, 2);
+                           $('#getSyncStatusResult').html(h);
+                       }
+                   });
+               });
+
+                document.addEventListener("mflySyncStatus", function(d) {
+                    if (d && d.detail) {
+                        var h = JSON.stringify(d.detail, null, 2);
+                        $("#syncEventHandlerResult").html(h);
+                    }
+                }, false);
+            });
+
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+        </script>
+	</head>
+
+	<body>
+		<h1>Sync Status</h1>
+		<button onclick="mflyCommands.close();" class="exit">Exit</button>
+
+        <h3>Get Sync Status</h3>
+        <button id="getSyncStatus">Get Sync Status</button>
+		<br>
+        <code id="getSyncStatusResult"></code>
+
+        <h3>Sync event handler</h3>
+        <code id="syncEventHandlerResult"></code>
+
+
+    </body>
+</html>

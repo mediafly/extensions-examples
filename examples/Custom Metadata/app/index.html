@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+			$(document).ready(function () {
+                mflyCommands.getItem('9cf282320e6340ee8b830e5376d54531product124276').done(function(data, status, xhr) {
+                    if (data.hasOwnProperty('name')) {
+                        $("#title").html(data['name']);
+                        $("#dateofevaluation").html(data['dateofevaluation']);
+                    }
+                });
+
+                // Render each of the devices
+                mflyCommands.getFolder('9cf282320e6340ee8b830e5376d54531product124276')
+                    .done(function(data) {
+                        for(var i=0; i < data.length; i++) {
+                            var obj = data[i];
+                            var html = "<div style='float: left; width: 350px;'>" +
+                                    "<img src='#' data-id='" + obj['id'] + "' style='max-width: 300px; max-height: 300px;'>" +
+                                    "</div>" +
+                                    "<div style=''><p>" + obj['desc']+"</p>" +
+                                    "<ul style='list-style-position: inside;'>" +
+                                    "<li>Price: " + obj['price'] + "</li>" +
+                                    "<li>Technologies: " + obj['technologies'] + "</li>" +
+                                    "<li>Segment: " + obj['segment'] + "</li></ul></div>" +
+                                    "<div style='clear: both;'></div>";
+                            $("#list").append(html);
+                        }
+                        // Put the images in
+                        $('img').each(function() {
+                            mflyCommands.embed($(this), $(this).data('id'));
+                        });
+                    })
+                    .fail(function() {
+                        console.log('Could not get the folder of devices');
+                    });
+			});
+		</script>
+		<style type="text/css">
+			.exit					{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+		</style>
+	</head>
+
+	<body>
+        <h1 id="title"></h1>
+        <p>Date of evaluation: <span id="dateofevaluation"></span></p>
+
+        <div>
+            <div id="list">
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

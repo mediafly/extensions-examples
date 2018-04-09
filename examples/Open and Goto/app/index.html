@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>Open and Goto</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+
+    <style type="text/css">
+        .exit					{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+        .clear 					{ clear:both; }
+        body                    { padding-top: 70px; }
+        div                     { padding: 0 10px 10px 10px; }
+    </style>
+</head>
+
+<body>
+
+<a href="javascript:mflyCommands.close()">
+    <div class="exit">Exit</div>
+</a>
+
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product94606')">Open document</a>
+</div>
+
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product94606', 3)">Open page 3 of document</a>
+</div>
+
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product233665', 45)">Open video at 45 seconds</a>
+</div>
+
+
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product91932')">Open URL item</a>
+</div>
+
+&nbsp;
+<div>
+    <a href="javascript:mflyCommands.openFolder('9cf282320e6340ee8b830e5376d54531product94607')">Open sub-links folder</a>
+</div>
+
+&nbsp;
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product94609')">Open slide 1 in sub-links</a>
+    Opening this document should open the item, but not allow the user to navigate after opening
+</div>
+<div>
+    <a href="javascript:mflyCommands.goto('9cf282320e6340ee8b830e5376d54531product94609')">Goto slide 1 in sub-links</a>
+    Opening this document should allow the user to navigate after opening, and throw away the hierarchy (e.g. this Interactive)
+</div>
+
+
+<div class="clear"></div>
+
+</body>
+</html>

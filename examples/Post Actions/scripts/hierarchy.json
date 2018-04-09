@@ -1,0 +1,291 @@
+{
+    "9cf282320e6340ee8b830e5376d54531product108530": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product108530",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product113842"
+        ],
+        "name": "GPS",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product108530",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product108530"
+    },
+    "9cf282320e6340ee8b830e5376d54531product124274": {
+        "autoStart": false,
+        "description": "This is an example of custom metadata. Custom metadata consists of arbitrary keys and values set up in Airship and passed through the apps into the Interactives.",
+        "id": "9cf282320e6340ee8b830e5376d54531product124274",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product124382",
+            "9cf282320e6340ee8b830e5376d54531product124276"
+        ],
+        "name": "Custom metadata",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product124274",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product124274"
+    },
+    "9cf282320e6340ee8b830e5376d54531product124276": {
+        "autoStart": false,
+        "dateofevaluation": "2014-07-25T09:15:00-05:00",
+        "description": "dateofevaluation=2014-07-25T09:15:00-05:00",
+        "id": "9cf282320e6340ee8b830e5376d54531product124276",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product124277",
+            "9cf282320e6340ee8b830e5376d54531product124278"
+        ],
+        "name": "Connected TV devices",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product124276",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product124276"
+    },
+    "9cf282320e6340ee8b830e5376d54531product132435": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product132435",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product132436"
+        ],
+        "name": "Refresh and mflySync logger",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product132435",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product132435"
+    },
+    "9cf282320e6340ee8b830e5376d54531product133198": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product133198",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product133199"
+        ],
+        "name": "Get Online / Offline Status",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product133198",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product133198"
+    },
+    "9cf282320e6340ee8b830e5376d54531product140686": {
+        "autoStart": false,
+        "description": "Data items are an enhancement to traditional Embed that allows csv, xml and JSON data items to have special meaning to the apps.\n\nCurrently, only iOS support this.",
+        "id": "9cf282320e6340ee8b830e5376d54531product140686",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product140689",
+            "9cf282320e6340ee8b830e5376d54531product140688",
+            "9cf282320e6340ee8b830e5376d54531product140687"
+        ],
+        "name": "Data Items",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product140686",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product140686"
+    },
+    "9cf282320e6340ee8b830e5376d54531product151597": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product151597",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product151663"
+        ],
+        "name": "Collections",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product151597",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product151597"
+    },
+    "9cf282320e6340ee8b830e5376d54531product153623": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product153623",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product153624"
+        ],
+        "name": "Embeddable documents",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product153623",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product153623"
+    },
+    "9cf282320e6340ee8b830e5376d54531product154467": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product154467",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product165319",
+            "9cf282320e6340ee8b830e5376d54531product165298"
+        ],
+        "name": "Jason's tests",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product154467",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product154467"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91919": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91919",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product165125"
+        ],
+        "name": "mflyDataInit and mflyInit logger",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91919",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91919"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91920": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product91920",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product165322"
+        ],
+        "name": "Save and retrieve data",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91920",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91920"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91921": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91921",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91931"
+        ],
+        "name": "Get Folder and Get Item",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91921",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91921"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91922": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product91922",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product156753"
+        ],
+        "name": "Search",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91922",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91922"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91923": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91923",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91933",
+            "9cf282320e6340ee8b830e5376d54531product94606",
+            "9cf282320e6340ee8b830e5376d54531product91932",
+            "9cf282320e6340ee8b830e5376d54531product94607"
+        ],
+        "name": "Links",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91923",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91923"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91925": {
+        "autoStart": false,
+        "id": "9cf282320e6340ee8b830e5376d54531product91925",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product165324",
+            "9cf282320e6340ee8b830e5376d54531product140686",
+            "9cf282320e6340ee8b830e5376d54531product91929",
+            "9cf282320e6340ee8b830e5376d54531product91928",
+            "9cf282320e6340ee8b830e5376d54531product104048",
+            "9cf282320e6340ee8b830e5376d54531product153623"
+        ],
+        "name": "Embed and Data Items",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91925",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91925"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91926": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91926",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product146938"
+        ],
+        "name": "Downloader status",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91926",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91926"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91931": {
+        "canAccessAssetOffline": true,
+        "canDownloadAsset": true,
+        "canShare": true,
+        "date": "2000-12-31T06:00:00:00-0600",
+        "id": "9cf282320e6340ee8b830e5376d54531product91931",
+        "launched": false,
+        "name": "Get Folder and Get Item",
+        "progress": 0,
+        "received": "2015-01-29T11:28:17:00-0600",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91931",
+        "type": "zip",
+        "url": "mfly://control/item/9cf282320e6340ee8b830e5376d54531product91931"
+    },
+    "9cf282320e6340ee8b830e5376d54531product91937": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product91937",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product91938"
+        ],
+        "name": "Widescreen Interactive and Second Screen Options",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product91937",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product91937"
+    },
+    "9cf282320e6340ee8b830e5376d54531product92427": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product92427",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product92428"
+        ],
+        "name": "Swipe",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product92427",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product92427"
+    },
+    "9cf282320e6340ee8b830e5376d54531product92554": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product92554",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product92555"
+        ],
+        "name": "Kitchen Sink",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product92554",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product92554"
+    },
+    "9cf282320e6340ee8b830e5376d54531product94607": {
+        "autoStart": false,
+        "description": " ",
+        "id": "9cf282320e6340ee8b830e5376d54531product94607",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product94609",
+            "9cf282320e6340ee8b830e5376d54531product94608"
+        ],
+        "name": "Sub-links",
+        "thumbnailUrl": "mfly://data/image/9cf282320e6340ee8b830e5376d54531product94607",
+        "type": "folder",
+        "url": "mfly://control/folder/9cf282320e6340ee8b830e5376d54531product94607"
+    },
+    "__root__": {
+        "autoStart": false,
+        "id": "__root__",
+        "items": [
+            "9cf282320e6340ee8b830e5376d54531product92554",
+            "9cf282320e6340ee8b830e5376d54531product91923",
+            "9cf282320e6340ee8b830e5376d54531product91921",
+            "9cf282320e6340ee8b830e5376d54531product151597",
+            "9cf282320e6340ee8b830e5376d54531product91919",
+            "9cf282320e6340ee8b830e5376d54531product132435",
+            "9cf282320e6340ee8b830e5376d54531product91920",
+            "9cf282320e6340ee8b830e5376d54531product91926",
+            "9cf282320e6340ee8b830e5376d54531product91925",
+            "9cf282320e6340ee8b830e5376d54531product124274",
+            "9cf282320e6340ee8b830e5376d54531product91937",
+            "9cf282320e6340ee8b830e5376d54531product91922",
+            "9cf282320e6340ee8b830e5376d54531product133198",
+            "9cf282320e6340ee8b830e5376d54531product92427",
+            "9cf282320e6340ee8b830e5376d54531product108530",
+            "9cf282320e6340ee8b830e5376d54531product154467"
+        ],
+        "name": "Interactives",
+        "thumbnailUrl": null,
+        "type": "folder",
+        "url": "mfly://control/folder/__root__"
+    },
+    "version": 3
+}

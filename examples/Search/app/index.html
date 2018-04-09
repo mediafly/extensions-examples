@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function () {
+				$(document).on("touchstart", ".exit", function () {
+					mflyCommands.close();
+                });
+                $("#search").on('keyup', function(e) {
+                    console.log("Searching for "+$(this).val());
+                    mflyCommands.search($(this).val())
+                            .done(function(data) {
+                                var h = JSON.stringify(data, null, 2);
+                                $('#result').html(h);
+                            })
+                            .fail(function() {
+                                console.log(xhr);
+                                $('#result').html("FAILURE!<br/>" + xhr.status + " " + xhr.statusText);
+                            })
+                    });
+			});
+
+            function mflyDataInit(data) {
+                // Initialize things here, if necessary.
+                return { 'mflyInitVersion': '4' }
+            }
+
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+		</script>
+		<style type="text/css">
+			.exit			{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+            code            { white-space: pre; }
+		</style>
+	</head>
+
+	<body>
+        <p>Search for: <input type="text" id="search" size="50" placeholder="Enter 2 or more characters"></p>
+		<h3>Result:</h3>
+        <code id="result"></code>
+		<button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

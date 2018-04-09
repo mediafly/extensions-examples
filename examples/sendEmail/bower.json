@@ -1,0 +1,20 @@
+{
+  "name": "collections",
+  "authors": [
+    "Nachiket Mehta <nmehta@mediafly.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mfly-commands": "#get-email-status"
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Email</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+
+			function sendEmail() {
+
+                var options = {
+                    to: $('#to').val(),
+                    subject: $('#subject').val(),
+                    body: $('#body').val()
+                };
+
+                if ($('#filename').val().length > 0 && $('#dataUrl').val().length > 0) {
+                    options.attachments = [{
+                        'filename': $('#filename').val(),
+                        'dataUrl': $('#dataUrl').val()
+                    }];
+                }
+
+                mflyCommands.sendEmail(options)
+                    .then(function(data, status) {
+						if (status === 202) {
+                            $("#response").html('Email queued. Queue Id: ' + data.emailQueueId);
+                        } else {
+                            $("#response").html('Email sent successfully');
+                        }
+                    }, function(data, status) {
+                        $("#response").html('Failed to send email');
+                    });
+			}
+
+			function getEmailStatus() {
+
+                var id = $('emailQueueId').val();
+
+                mflyCommands.getEmailStatus(id)
+                .then(function(data) {
+                    $("#statusResponse").html(data.status);
+                }, function() {
+                    $("#statusResponse").html('Failed to get status');
+                });
+			}
+
+		</script>
+	</head>
+
+	<body>
+    <h1>Send Email</h1>
+    <hr>
+    <div>
+        To: <input type="text" id="to"> <br/><br/>
+        Subject: <input type="text" id="subject" value="This is a test"> <br/><br/>
+        Body: <input type="text" id="body" value="This is a test email from Mediafly."> <br/><br/> 
+        Attachment: <br/> <br/>
+            filename: <input type="text" id="filename">
+            dataUrl: <input type="text" id="dataUrl"> <br/><br/>
+        <button class="getCollection button" onclick="sendEmail();">
+            Send Email
+        </button>
+        <p>Response:</p>
+        <code id="response"></code>
+    </div>
+	<hr>
+    <div>
+        <h2>Get Email Status</h2>
+        Email Queue Id: <input type="text" id="emailQueueId">
+        <button onclick="getEmailStatus();">
+            Get Status
+        </button><br/>
+        <p>Response:</p>
+        <code id="statusResponse"></code>
+    </div>
+
+    <button onclick="mflyCommands.close();" class="exit">Exit</button>
+	</body>
+</html>

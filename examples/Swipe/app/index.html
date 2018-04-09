@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/hammerjs/hammer.min.js"></script>
+        <script type="text/javascript" src="bower_components/jquery-hammerjs/jquery.hammer.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(document).on("touchstart", ".exit", function () {
+					window.open("mfly://control/done");
+                });
+
+                $("body").hammer({ drag_lock_to_axis: true }).on('swipeleft', function(event) {
+                    log('swipe left on body; here you would call mfly://control/next');
+                });
+                $("body").hammer({ drag_lock_to_axis: true }).on('swiperight', function(event) {
+                    log('swipe right on body; here you would call mfly://control/previous');
+                });
+                $("body").hammer().on('drag', function(event) {
+                    event.gesture.preventDefault(); // Stop vertical dragging. You may not need this if you already handle this in another way.
+                });
+			});
+
+            function log(s) {
+                $("#result").append(s + "<br>");
+                //window.open(HOSTNAME + "control/next");
+            }
+
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+		</script>
+		<style type="text/css">
+            html, body      { height: 100%; overflow: hidden; }
+            .exit           { background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+		</style>
+	</head>
+
+	<body id="body">
+        <p>Try swiping left-to-right or right-to-left.
+		<h3>Log:</h3>
+        <div id="result"></div>
+		<div class="exit">Exit</div>
+	</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Save and Retrieve Data</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+	</head>
+
+	<body>
+		<h1>Save and Retrieve Data</h1>
+		<button onclick="mflyCommands.close();" class="exit">Exit</button>
+
+        <div>
+            <h3>PUT</h3>
+            <form id="testPutAsGet">
+                <div>
+                    <p><input type="text" id="putKey" name="putKey" placeholder="Enter key" size="100" /></p>
+                    <p><input type="text" id="putValue" name="putValue" placeholder="Enter value" size="100"/></p>
+                    <p>Test cases:
+                        <input type="button" class="putTest" data-val='{"a":"b"}' value="aa"> &nbsp;
+                        <input type="button" class="putTest" data-val='1' value="ab"> &nbsp;
+                        <input type="button" class="putTest" data-val='1 & 2' value="b"></p>
+                    <p><input type="submit" value="PUT"/></p>
+                </div>
+            </form>
+        </div>
+        <div id="putResult"></div>
+
+        <script>
+        
+            function mflySyncStatus() {
+
+            }
+
+            function mflyInit() {
+
+            }
+
+            function mflyDownloadStatus() {
+
+            }
+
+            function mflyResume() {
+
+            }
+
+            function mflyPause() {
+
+            }
+
+            $(".putTest").on('click', function() {
+                var key = $(this).attr('value');
+                var val = $(this).attr('data-val');
+                $("#putKey").val(key);
+                $("#putValue").val(val);
+            });
+            $('#testPutAsGet').submit(function(ev) {
+                ev.preventDefault();
+                $('#putResult').html("Executing PUT...");
+                var key = $('#putKey').val();
+                var value = $("#putValue").val();
+                mflyCommands.putValue(key, value)
+                        .done(function(data, status) {
+                            $('#putResult').html("SUCCESS!<br/>Result: " + data + "<br/>Status: " + status);
+                        })
+                        .fail(function(deferred, status) {
+                            $('#putResult').html("FAIL! See console for logs.");
+                            console.log("PUT failed. Deferred: ",deferred);
+                            console.log("PUT failed. status: ",status);
+                        });
+            });
+        </script>
+
+        <div>
+            <h3>GET</h3>
+            <form id="testGet">
+                <div>
+                    <p><input type="text" id="getKey" name="getKey" placeholder="Enter key" size="100" /></p>
+                    <p><input type="submit" value="GET"/></p>
+                </div>
+            </form>
+        </div>
+
+        <div id="getResult"></div>
+
+		<div>
+            <h3>DELETE</h3>
+            <form id="testDelete">
+                <div>
+                    <p><input type="text" id="deleteKey" name="deleteKey" placeholder="Enter key" size="100" /></p>
+                    <p><input type="submit" value="DELETE"/></p>
+                </div>
+            </form>
+        </div>
+
+        <div id="deleteResult"></div>
+
+        <script>
+            $('#testGet').submit(function(ev) {
+                ev.preventDefault();
+                var key = $('#getKey').val();
+
+                mflyCommands.getValue(key)
+                        .done(function(data, status) {
+                            $('#getResult').html("SUCCESS!<br/>Result: " + data + "<br/>Status: " + status);
+                        })
+                        .fail(function(data, status) {
+                            $('#getResult').html("FAILURE!<br/>Result: " + data + "<br/>Status: " + status);
+                        });
+            });
+
+			$('#testDelete').submit(function(ev) {
+                ev.preventDefault();
+                var key = $('#deleteKey').val();
+
+                mflyCommands.deleteKey(key)
+                        .done(function(data, status) {
+                            $('#deleteResult').html("SUCCESS!<br/>Result: " + data + "<br/>Status: " + status);
+                        })
+                        .fail(function(data, status) {
+                            $('#deleteResult').html("FAILURE!<br/>Result: " + data + "<br/>Status: " + status);
+                        });
+            });
+        </script>
+
+
+
+
+
+        <div>
+            <h3>GET PREFIX</h3>
+            <form id="testGetFirst">
+                <div>
+                    <p><input type="text" id="getFirstKey" name="getFirstKey" placeholder="Enter key prefix" size="100" /></p>
+                    <p><input type="submit" value="GET"/></p>
+                </div>
+            </form>
+        </div>
+
+        <div id="getFirstResult"></div>
+
+        <script>
+            $('#testGetFirst').submit(function(ev) {
+                ev.preventDefault();
+                var prefix = $('#getFirstKey').val();
+
+                mflyCommands.getValues(prefix)
+                        .done(function(data, status) {
+                            $('#getFirstResult').html("SUCCESS!<br/>Result: " + JSON.stringify(data) + "<br/>Status: " + status);
+                        })
+                        .fail(function(deferred, status) {
+                            $('#getFirstResult').html("FAILURE!<br/>Result: " + status[0] + "<br/>Status: " + status[1]);
+                        });
+            });
+        </script>
+
+
+
+
+
+
+        <div>
+            <h3>GET ALL</h3>
+            <form id="testGetAll">
+                <div>
+                    <p><input type="submit" value="GET ALL"/></p>
+                </div>
+            </form>
+        </div>
+
+        <div id="getAllResult"></div>
+
+        <script>
+            $('#testGetAll').submit(function(ev) {
+                ev.preventDefault();
+                mflyCommands.getValues()
+                        .done(function(data, status) {
+                            $('#getAllResult').html("SUCCESS!<br/>Result: " + JSON.stringify(data) + "<br/>Status: " + status);
+                        })
+                        .fail(function(deferred, status) {
+                            $('#getAllResult').html("FAILURE!<br/>Result: " + status[0] + "<br/>Status: " + status[1]);
+                        });
+            });
+        </script>
+
+	</body>
+</html>
