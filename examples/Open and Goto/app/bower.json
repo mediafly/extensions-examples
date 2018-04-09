@@ -1,9 +1,7 @@
 {
-  "name": "app",
-  "version": "0.0.0",
-  "authors": [
-    "nachiket mehta <nmehta@mediafly.com>"
-  ],
+  "name": "open",
+  "description": "",
+  "main": "",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -13,6 +11,6 @@
     "tests"
   ],
   "dependencies": {
-    "mfly-commands": "~1.10"
+    "mfly-commands": "#feature/open-item-context"
   }
 }

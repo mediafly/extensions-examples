@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Open and Goto</title>
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
 
     <style type="text/css">
@@ -21,6 +21,18 @@
 
 <div>
     <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product94606')">Open document</a>
+</div>
+
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product153624', { context:'collection', collection:'ba5da6fdde8445a286fce6491f172c43' })">Open document from a collection</a>
+</div>
+
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product94606', { context:'search', search:'pdf' })">Open document from search results</a>
+</div>
+
+<div>
+    <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product94606', { context:'searchFolder', parentSlug:'9cf282320e6340ee8b830e5376d54531product444082' })">Open document from a search folder</a>
 </div>
 
 <div>
@@ -46,13 +58,9 @@
     <a href="javascript:mflyCommands.open('9cf282320e6340ee8b830e5376d54531product94609')">Open slide 1 in sub-links</a>
     Opening this document should open the item, but not allow the user to navigate after opening
 </div>
-<div>
-    <a href="javascript:mflyCommands.goto('9cf282320e6340ee8b830e5376d54531product94609')">Goto slide 1 in sub-links</a>
-    Opening this document should allow the user to navigate after opening, and throw away the hierarchy (e.g. this Interactive)
-</div>
-
 
 <div class="clear"></div>
 
 </body>
 </html>
+
