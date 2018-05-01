@@ -3,7 +3,7 @@
 	<head>
 		<title></title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
         <script type="text/javascript" src="js/mflyDeveloperTools.js"></script>
 		<script type="text/javascript">
@@ -62,7 +62,7 @@
                         .done(function(data) {
                             $("#add_response").html("Add successful.<br>&nbsp;<br>");
                         }).fail(function(xhr, status, error) {
-                            $("#add_response").html("Add failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                            $("#add_response").html("Add failed. Status=" + status);
                         });
 			}
 
@@ -71,7 +71,7 @@
                         .done(function(data) {
                             $("#remove_response").html("Remove successful.<br>&nbsp;<br>");
                         }).fail(function(xhr, status, error) {
-                            $("#remove_response").html("Remove failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                            $("#remove_response").html("Remove failed. Status=" + status);
                         });
             }
 
@@ -80,7 +80,7 @@
                         .done(function(data) {
                             $("#delete_response").html("Delete successful.<br>&nbsp;<br>");
                         }).fail(function(xhr, status, error) {
-                            $("#delete_response").html("Delete failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                            $("#delete_response").html("Delete failed. Status=" + status);
                         });
             }
 
@@ -89,7 +89,7 @@
                         .done(function(data) {
                             $("#remove_shared_response").html("Remove successful.<br>&nbsp;<br>");
                         }).fail(function(xhr, status, error) {
-                            $("#remove_shared_response").html("Remove failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                            $("#remove_shared_response").html("Remove failed. Status=" + status);
                         });
             }
 
@@ -98,7 +98,7 @@
                         .done(function(data) {
                             $("#reorder_response").html("Reorder successful.<br>&nbsp;<br>");
                         }).fail(function(xhr, status, error) {
-                            $("#reorder_response").html("Reorder failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                            $("#reorder_response").html("Reorder failed. Status=" + status);
                         });
             }
 
@@ -107,7 +107,7 @@
                         .done(function(data) {
                             $("#rename_response").html("Rename successful.<br>&nbsp;<br>");
                         }).fail(function(xhr, status, error) {
-                            $("#rename_response").html("Rename failed. Status=" + status + " error="+error+"<br>&nbsp;<br>");
+                            $("#rename_response").html("Rename failed. Status=" + status);
                         });
             }
 
