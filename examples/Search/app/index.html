@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Search</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
 		<script type="text/javascript">
 
@@ -11,9 +11,23 @@
 				$(document).on("touchstart", ".exit", function () {
 					mflyCommands.close();
                 });
-                $("#search").on('keyup', function(e) {
-                    console.log("Searching for "+$(this).val());
-                    mflyCommands.search($(this).val())
+                $("#searchButton").on('click', function(e) {
+
+					var offset = $('#offset').val()
+					var limit = $('#limit').val()
+
+					if (!offset) {
+						$('#offset').val(0)
+						offset = 0
+					}
+
+					if (!limit) {
+						$('#limit').val(10)
+						limit = 10
+					}
+
+                    console.log("Searching for "+$('#searchInput').val());
+                    mflyCommands.search($('#searchInput').val(), offset, limit)
                             .done(function(data) {
                                 var h = JSON.stringify(data, null, 2);
                                 $('#result').html(h);
@@ -21,8 +35,8 @@
                             .fail(function() {
                                 console.log(xhr);
                                 $('#result').html("FAILURE!<br/>" + xhr.status + " " + xhr.statusText);
-                            })
-                    });
+							})
+						});
 			});
 
             function mflyDataInit(data) {
@@ -57,9 +71,13 @@
 	</head>
 
 	<body>
-        <p>Search for: <input type="text" id="search" size="50" placeholder="Enter 2 or more characters"></p>
+		<p>Term: <input type="text" id="searchInput" size="50" placeholder="Enter 2 or more characters"></p>
+		<p>Offset: <input type="number" id="offset" size="10" value="0"></p>
+		<p>Limit: <input type="number" id="limit" size="10" value="10"></p>
+		<button id="searchButton">Search</button>
 		<h3>Result:</h3>
         <code id="result"></code>
 		<button onclick="mflyCommands.close();" class="exit">Exit</button>
 	</body>
 </html>
+</strong></em>

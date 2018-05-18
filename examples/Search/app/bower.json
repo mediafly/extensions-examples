@@ -1,10 +1,5 @@
 {
-  "name": "app",
-  "version": "0.0.0",
-  "authors": [
-    "nachiket mehta <nmehta@mediafly.com>"
-  ],
-  "license": "MIT",
+  "name": "search",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,6 +8,6 @@
     "tests"
   ],
   "dependencies": {
-    "mfly-commands": "~1.11"
+    "mfly-commands": "3.1.2"
   }
 }
