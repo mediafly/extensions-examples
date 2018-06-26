@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Get Interactive Info</title>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$('#interactiveParams').text(window.location.search);
+			})
+
+			mflyCommands.getInteractiveInfo().done(function(info) {
+            	$('#interactiveInfo').val(JSON.stringify(info, null, 4));
+			});
+
+			mflyCommands.getSystemInfo().done(function(info) {
+            	$('#systemInfo').val(JSON.stringify(info, null, 4));
+			});
+
+			mflyCommands.getUserInfo().done(function(info) {
+            	$('#userInfo').val(JSON.stringify(info, null, 4));
+			});
+
+			mflyCommands.getUploadUrl("huehuehue").done(function(info) {
+            	$('#uploadUrl').val(JSON.stringify(info, null, 4));
+			});
+
+			mflyCommands.getOnlineStatus().done(function(info) {
+            	$('#onlineStatus').val(JSON.stringify(info, null, 4));
+			});	
+
+			mflyCommands.getGpsCoordinates().done(function(info) {
+            	$('#gpsInfo').val(JSON.stringify(info, null, 4));
+			});
+
+			function getSyncStatus() {
+
+				mflyCommands.getSyncStatus().done(function (syncStatus) {
+					$('#syncStatus').val(JSON.stringify(syncStatus, null, 4));
+				});
+			}
+
+			function refresh() {
+
+				mflyCommands.refresh().done(function () {
+					alert('refresh command was issued.');
+				});
+			}
+
+			function mflySyncStatus() {
+
+			}
+
+			function mflyInit() {
+
+			}
+
+			function mflyDataInit() {
+
+			}
+
+			function mflyDownloadStatus() {
+
+			}
+
+			function mflyResume() {
+
+			}
+
+			function mflyPause() {
+
+			}
+		</script>
+		<style type="text/css">
+			.exit			{ background:#ccc; padding:15px; position:absolute; right:20px; top:20px; }
+            code            { white-space: pre; }
+		</style>
+	</head>
+
+	<body>
+        <button onclick="mflyCommands.close();" class="exit">Exit</button>
+        <button onclick="getSyncStatus();" class="exit" style="right: 85px;">Get Sync Status</button>
+		<button onclick="refresh();" class="exit" style="right: 225px;">Refresh</button>
+
+        <span>Interactive query params:</span>  <span id="interactiveParams" rows="20" cols="90"></span>
+        <div>getInteractiveInfo():</div>
+        <textarea id="interactiveInfo" rows="20" cols="90"></textarea>
+        <div>getSystemInfo():</div>
+        <textarea id="systemInfo" rows="20" cols="90"></textarea>
+        <div>getUserInfo():</div>
+        <textarea id="userInfo" rows="20" cols="90"></textarea>
+        <div>getOnlineStatus():</div>
+        <textarea id="onlineStatus" rows="20" cols="90"></textarea>
+        <div>getGpsCoordinates():</div>
+        <textarea id="gpsInfo" rows="20" cols="90"></textarea>
+        <div>getUploadUrl(key):</div>
+        <textarea id="uploadUrl" rows="20" cols="90"></textarea>
+        <div>getSyncStatus():</div>
+        <textarea id="syncStatus" rows="20" cols="90"></textarea>
+	</body>
+</html>
