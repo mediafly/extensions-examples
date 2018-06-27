@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title></title>
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="bower_components/mfly-commands/src/mflyCommands.js"></script>
 		<script type="text/javascript">
 			function mflySyncStatus() {
@@ -37,6 +37,14 @@
                         });
             }
 
+            function getParentItems() {
+                mflyCommands.getParentItems()
+                        .done(function(data) {
+                            $(".logs").html('');
+                            $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                        });
+            }
+
             function getItem(id) {
                 if (!id) {
                     id = thisId;
@@ -46,11 +54,67 @@
                             $(".logs").html('');
                             $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
                             $('#interactiveThumbnail').attr('src', data.thumbnailUrl);
+                            //if downloadUrl exists on item, it mean the user has proper permissions to download the asset
+                            if (data.downloadUrl) {
+                                $('.logs').prepend('<a href="' + data.downloadUrl + '">Download Asset</a><br/>');
+                            }
+                        });
+            }
+			
+			function getCurrent() {
+                mflyCommands.getCurrentItem().done(function(data) {
+                    $(".logs").html('');
+                    $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                    $('#interactiveThumbnail').attr('src', data.thumbnailUrl);
+                });
+			}
+			
+			function getShare(id) {
+                if (!id) {
+                    id = thisId;
+                }
+                mflyCommands.getShare(id)
+                        .done(function(data) {
+                            $(".logs").html('');
+                            $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                            $('#interactiveThumbnail').attr('src', data.thumbnailUrl);
+                        });
+			}
+
+            function getRecent() {
+                mflyCommands.getRecentlyCreatedContent()
+                        .done(function(data) {
+                            $(".logs").html('');
+                            $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                        });
+            }
+            
+			function getLastViewed() {
+                mflyCommands.getLastViewedContent()
+                        .done(function(data) {
+                            $(".logs").html('');
+                            $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
                         });
             }
 
+            function updateItemMetadata() {
+                mflyCommands.updateItemMetadata('9cf282320e6340ee8b830e5376d54531product153624', { field1: 'value1' })
+                    .done(function(data) {
+                        $(".logs").html('');
+                        $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                    })
+            }
+
+            function copyItem() {
+                mflyCommands.copy('__root__', '9cf282320e6340ee8b830e5376d54531product153624', 'Copied Item')
+                    .done(function(data) {
+                        $(".logs").html('');
+                        $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                    })
+            }
+			
             $(document).ready(function() {
-                mflyCommands.getInteractiveInfo().done(function(data) {
+                mflyCommands.getCurrentItem().done(function(data) {
                     thisId = data.id;
                 });
             });
@@ -64,12 +128,20 @@
 	</head>
 
 	<body>
-        <p>For this Interactive's parent folder, call <a href="#" onclick="getFolder('9cf282320e6340ee8b830e5376d54531product91921');">Get Folder</a>
-            or <a href="#" onclick="getItem('9cf282320e6340ee8b830e5376d54531product91921');">Get Item</a>.</p>
-		<p>For this Interactive, call <a href="#" onclick="getItem();">Get Item</a>.</p>
-		<p>For a document, call <a href="#" onclick="getItem('9cf282320e6340ee8b830e5376d54531product153624');">Get Item</a>.</p>
-        <p>For a video, call <a href="#" onclick="getItem('9cf282320e6340ee8b830e5376d54531product233665');">Get Item</a>.</p>
+        <p>For this Interactive's parent folder, call <a href="#" onclick="getFolder('9cf282320e6340ee8b830e5376d54531product265955');">Get Folder</a>
+            or <a href="#" onclick="getItem('9cf282320e6340ee8b830e5376d54531product265955');">Get Item</a> or <a href="#" onclick="getShare('9cf282320e6340ee8b830e5376d54531product265955');">Share Link</a>.</p>
+		<p>For this Interactive, call <a href="#" onclick="getItem();">Get Item</a> or <a href="#" onclick="getCurrent();">Get Current</a> or <a href="#" onclick="getShare();">Get Share</a>.</p>
+		<p>For a document, call <a href="#" onclick="getItem('9cf282320e6340ee8b830e5376d54531product153624');">Get Item</a> or <a href="#" onclick="getShare('9cf282320e6340ee8b830e5376d54531product153624');">Get Share</a>.</p>
+        <p>For a video, call <a href="#" onclick="getItem('9cf282320e6340ee8b830e5376d54531product233665');">Get Item</a> or <a href="#" onclick="getShare('9cf282320e6340ee8b830e5376d54531product233665');">Get Share</a>.</p>
 
+		<p>For recently created call <a href="#" onclick="getRecent();">Get Recent</a>.</p>
+		<p>For lastViewed call <a href="#" onclick="getLastViewed();">Get last viewed</a>.</p>
+
+		<p>For getFolder(&#39;__root__&#39;) call <a href="#" onclick="getFolder('__root__');">Get Root Folder</a>.</p>
+		<p>For getParentItems() call <a href="#" onclick="getParentItems();">Get Parent Items</a>.</p>
+		<p>Update metadata field "field1" for item (9cf282320e6340ee8b830e5376d54531product153624): <a href="#" onclick="updateItemMetadata();">Update Item Metadata</a>.</p>
+		<p>Copy item (9cf282320e6340ee8b830e5376d54531product153624) to the root folder: <a href="#" onclick="copyItem();">Copy</a>.</p>
+		
 		<h3>Logs</h3>
         <div class="logs"></div>
         <h3>This Interactive's Thumbnail</h3>
