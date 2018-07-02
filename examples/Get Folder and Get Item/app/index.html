@@ -112,6 +112,14 @@
                         $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
                     })
             }
+
+            function getLinkItem() {
+                mflyCommands.getItem('9cf282320e6340ee8b830e5376d54531product463013')
+                    .done(function(data) {
+                        $(".logs").html('');
+                        $(".logs").append(JSON.stringify(data, null, 2) + "<br>&nbsp;<br>");
+                    })
+            }
 			
             $(document).ready(function() {
                 mflyCommands.getCurrentItem().done(function(data) {
@@ -140,7 +148,8 @@
 		<p>For getFolder(&#39;__root__&#39;) call <a href="#" onclick="getFolder('__root__');">Get Root Folder</a>.</p>
 		<p>For getParentItems() call <a href="#" onclick="getParentItems();">Get Parent Items</a>.</p>
 		<p>Update metadata field "field1" for item (9cf282320e6340ee8b830e5376d54531product153624): <a href="#" onclick="updateItemMetadata();">Update Item Metadata</a>.</p>
-		<p>Copy item (9cf282320e6340ee8b830e5376d54531product153624) to the root folder: <a href="#" onclick="copyItem();">Copy</a>.</p>
+        <p>Copy item (9cf282320e6340ee8b830e5376d54531product153624) to the root folder: <a href="#" onclick="copyItem();">Copy</a>.</p>
+        <p>Get Link Item: <a href="#" onclick="getLinkItem()">Get Link Item</a></p>
 		
 		<h3>Logs</h3>
         <div class="logs"></div>
