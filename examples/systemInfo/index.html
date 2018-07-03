@@ -14,6 +14,10 @@
             	$('#interactiveInfo').val(JSON.stringify(info, null, 4));
 			});
 
+			mflyCommands.getParentItems().done(function(items) {
+            	$('#parentItems').val(JSON.stringify(items, null, 4));
+			});
+
 			mflyCommands.getSystemInfo().done(function(info) {
             	$('#systemInfo').val(JSON.stringify(info, null, 4));
 			});
@@ -86,6 +90,8 @@
         <span>Interactive query params:</span>  <span id="interactiveParams" rows="20" cols="90"></span>
         <div>getInteractiveInfo():</div>
         <textarea id="interactiveInfo" rows="20" cols="90"></textarea>
+        <div>getParentItems():</div>
+        <textarea id="parentItems" rows="20" cols="90"></textarea>
         <div>getSystemInfo():</div>
         <textarea id="systemInfo" rows="20" cols="90"></textarea>
         <div>getUserInfo():</div>
